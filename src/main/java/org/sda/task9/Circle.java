@@ -3,8 +3,9 @@ package org.sda.task9;
 
 import org.sda.task10.Movable;
 import org.sda.task10.MoveDirection;
+import org.sda.task11.Resizable;
 
-public class Circle implements Movable {
+public class Circle implements Movable, Resizable {
 
     private Point2D center;
     private Point2D point;
@@ -60,5 +61,11 @@ public class Circle implements Movable {
                 "center=" + center +
                 ", point=" + point +
                 '}';
+    }
+
+    @Override
+    public void resize(double resizeFactor) {
+        var radius = getRadius() * resizeFactor;
+        this.point = new Point2D(this.point.getX() + radius, this.point.getY() + radius);
     }
 }
