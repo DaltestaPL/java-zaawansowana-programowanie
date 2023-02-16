@@ -1,5 +1,6 @@
 package org.sda.task12;
 
+import javax.naming.spi.DirObjectFactory;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -7,12 +8,12 @@ import java.util.Objects;
 public class Car {
 
     private String nazwa, model;
-    private double cena;
+    private Double cena;
     private int rokProdukcji;
     private List<Manufacturer> listaProducentow;
     private EngineType engineType;
 
-    public Car(String nazwa, String model, double cena, int rokProdukcji, List<Manufacturer> listaProducentow, EngineType engineType) {
+    public Car(String nazwa, String model, Double cena, int rokProdukcji, List<Manufacturer> listaProducentow, EngineType engineType) {
         this.nazwa = nazwa;
         this.model = model;
         this.cena = cena;
@@ -37,7 +38,7 @@ public class Car {
         this.model = model;
     }
 
-    public double getCena() {
+    public Double getCena() {
         return cena;
     }
 
