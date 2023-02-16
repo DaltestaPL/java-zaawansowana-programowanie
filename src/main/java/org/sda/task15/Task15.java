@@ -15,6 +15,9 @@ package org.sda.task15;
 public class Task15 {
 
     public static void main(String[] args) {
+        Car ferrari = Car.FERRARI;
+        Car porshe = Car.PORSCHE;
 
+        ferrari.isFasterThan(porshe);
     }
 }
